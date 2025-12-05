@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vallaipallam VNAS Command Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Vallaipallam VNAS Command Documentation</h1>
+        <p>A comprehensive guide to Vallaipallam's Network Administration System (VNAS) commands.</p>
+    </header>
+
+    <main>
+        <section id="zero-arg">
+            <h2>1. Zero-Argument Commands (0 Args)</h2>
+            <p>These commands execute immediately and **do not** require any additional arguments.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tamil Keyword</th>
+                        <th>Hindi Keyword</th>
+                        <th>English Command</th>
+                        <th>Functionality Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Tamil">நிர்வாகி_இயக்கு</td>
+                        <td data-label="Hindi">प्रशासक_रन</td>
+                        <td data-label="English" class="command">RUN_AS_ADMIN</td>
+                        <td data-label="Description">Executes the next command with administrative/root privileges.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">இணைப்பு_முகவரி</td>
+                        <td data-label="Hindi">इंटरफ़ेस_पते_दिखाओ</td>
+                        <td data-label="English" class="command">SHOW_INTERFACE_ADDRESSES</td>
+                        <td data-label="Description">Displays the IP addresses and netmasks for all active network interfaces.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">இணைப்பு_நிலை</td>
+                        <td data-label="Hindi">इंटरफ़ेस_स्थिति_දિਖාਓ</td>
+                        <td data-label="English" class="command">SHOW_INTERFACE_STATUS</td>
+                        <td data-label="Description">Lists the operational status (up/down) of all configured network interfaces.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">இணைப்பு_செயலில்</td>
+                        <td data-label="Hindi">सक्रिय_कनेक्शन_दिखाओ</td>
+                        <td data-label="English" class="command">SHOW_ACTIVE_CONNECTIONS</td>
+                        <td data-label="Description">Shows a list of all currently established network connections (TCP/UDP).</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">இணைப்பு_உள்வெளி</td>
+                        <td data-label="Hindi">नेटवर्क_IO_दिखाओ</td>
+                        <td data-label="English" class="command">SHOW_NETWORK_IO</td>
+                        <td data-label="Description">Displays the total network input/output (TX/RX) statistics since boot.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">இணைப்பு_உள்வெளி_பிரிப்பு</td>
+                        <td data-label="Hindi">प्रति_इंटरफ़ेस_IO_दिखाओ</td>
+                        <td data-label="English" class="command">SHOW_NETWORK_IO_PER_INTERFACE</td>
+                        <td data-label="Description">Displays network input/output (TX/RX) statistics broken down by interface.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">இணைப்பு_வேகம்</td>
+                        <td data-label="Hindi">इंटरफ़ेस_गति_मापो</td>
+                        <td data-label="English" class="command">SHOW_NETWORK_SPEED</td>
+                        <td data-label="Description">Tests and displays the current link speed and throughput of the primary interface.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">வலைப்பின்னல்_பட்டியல்</td>
+                        <td data-label="Hindi">वाईफाई_सूची_दिखाओ</td>
+                        <td data-label="English" class="command">LIST_WIFI</td>
+                        <td data-label="Description">Scans and lists all available Wi-Fi networks in the vicinity.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">வாயில்_காட்டு</td>
+                        <td data-label="Hindi">गेटवे_दिखाओ</td>
+                        <td data-label="English" class="command">SHOW_GATEWAY</td>
+                        <td data-label="Description">Displays the default network gateway IP address.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">தடுப்பு_செயல்படுத்து</td>
+                        <td data-label="Hindi">फायरवॉल_सक्रिय_करो</td>
+                        <td data-label="English" class="command">ENABLE_FIREWALL</td>
+                        <td data-label="Description">Activates the system's network firewall.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">தடுப்பு_நிறுத்து</td>
+                        <td data-label="Hindi">फायरवॉल_निष्क्रिय_करो</td>
+                        <td data-label="English" class="command">DISABLE_FIREWALL</td>
+                        <td data-label="Description">Deactivates the system's network firewall.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">துறைமுகம்_விதிகள்</td>
+                        <td data-label="Hindi">फायरवॉल_नियम_दिखाओ</td>
+                        <td data-label="English" class="command">LIST_FIREWALL_RULES</td>
+                        <td data-label="Description">Displays all currently configured firewall rules (allow/block).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="one-arg">
+            <h2>2. One-Argument Commands (1 Arg)</h2>
+            <p>These commands require exactly **ONE** argument to be specified.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tamil Keyword</th>
+                        <th>Hindi Keyword</th>
+                        <th>English Command</th>
+                        <th>Argument Required</th>
+                        <th>Functionality Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Tamil">இணைப்பு_திற</td>
+                        <td data-label="Hindi">इंटरफ़ेस_सक्रिय_करो</td>
+                        <td data-label="English" class="command">ENABLE_INTERFACE</td>
+                        <td data-label="Argument">&lt;interface_name&gt;</td>
+                        <td data-label="Description">Brings the specified network interface (e.g., eth0) online.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">இணைப்பு_மூடு</td>
+                        <td data-label="Hindi">इंटरफ़ेस_निष्क्रिय_करो</td>
+                        <td data-label="English" class="command">DISABLE_INTERFACE</td>
+                        <td data-label="Argument">&lt;interface_name&gt;</td>
+                        <td data-label="Description">Takes the specified network interface offline.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">DHCP_அமை</td>
+                        <td data-label="Hindi">DHCP_सक्रिय_करो</td>
+                        <td data-label="English" class="command">SET_DHCP</td>
+                        <td data-label="Argument">&lt;interface_name&gt;</td>
+                        <td data-label="Description">Configures the specified interface to obtain an IP address via DHCP.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">இணைப்பு_அடைந்ததா</td>
+                        <td data-label="Hindi">पिंग_जाँच</td>
+                        <td data-label="English" class="command">PING</td>
+                        <td data-label="Argument">&lt;target_address&gt;</td>
+                        <td data-label="Description">Sends ICMP echo requests to the target to test connectivity and measure latency.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">வழித்தடம்_காட்டு</td>
+                        <td data-label="Hindi">मार्ग_दिखाओ</td>
+                        <td data-label="English" class="command">TRACEROUTE</td>
+                        <td data-label="Argument">&lt;target_address&gt;</td>
+                        <td data-label="Description">Displays the path and hop count that packets take to reach a destination.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">பெயர்ப்பட்டியல்_காண்</td>
+                        <td data-label="Hindi">DNS_खोज</td>
+                        <td data-label="English" class="command">DNS_LOOKUP</td>
+                        <td data-label="Argument">&lt;domain_name&gt;</td>
+                        <td data-label="Description">Resolves the IP address associated with the given domain name.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">தாமதம்_சோதனை</td>
+                        <td data-label="Hindi">विलंब_परीक्षण</td>
+                        <td data-label="English" class="command">LATENCY_TEST</td>
+                        <td data-label="Argument">&lt;target_address&gt;</td>
+                        <td data-label="Description">Measures the network latency (delay) to the target address.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">துறைமுகம்_அனுமதி</td>
+                        <td data-label="Hindi">पोर्ट_अनुमति</td>
+                        <td data-label="English" class="command">ALLOW_PORT</td>
+                        <td data-label="Argument">&lt;port_number&gt;</td>
+                        <td data-label="Description">Adds a firewall rule to allow incoming traffic on the specified port.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">துறைமுகம்_தடு</td>
+                        <td data-label="Hindi">पोर्ट_अवरोध</td>
+                        <td data-label="English" class="command">BLOCK_PORT</td>
+                        <td data-label="Argument">&lt;port_number&gt;</td>
+                        <td data-label="Description">Adds a firewall rule to block incoming traffic on the specified port.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">சேவை_அனுமதி</td>
+                        <td data-label="Hindi">सेवा_अनुमति</td>
+                        <td data-label="English" class="command">ALLOW_SERVICE</td>
+                        <td data-label="Argument">&lt;service_name&gt;</td>
+                        <td data-label="Description">Allows traffic for a predefined service (e.g., HTTP, SSH) through the firewall.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">சேவை_தடு</td>
+                        <td data-label="Hindi">सेवा_अवरोध</td>
+                        <td data-label="English" class="command">BLOCK_SERVICE</td>
+                        <td data-label="Argument">&lt;service_name&gt;</td>
+                        <td data-label="Description">Blocks traffic for a predefined service through the firewall.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">வலைப்பின்னல்_துண்டிக்க</td>
+                        <td data-label="Hindi">वाईफाई_काटो</td>
+                        <td data-label="English" class="command">DISCONNECT_WIFI</td>
+                        <td data-label="Argument">&lt;network_name&gt;</td>
+                        <td data-label="Description">Disconnects the system from the specified Wi-Fi network.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="multi-arg">
+            <h2>3. Multi-Argument Commands</h2>
+
+            <section>
+                <h3>3.1. Two-Argument Commands (2 Args)</h3>
+                <p>These commands require **TWO** main arguments, separated by a keyword argument.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tamil Keyword</th>
+                            <th>Hindi Keyword</th>
+                            <th>English Command</th>
+                            <th>Arguments Required (Syntax)</th>
+                            <th>Functionality Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Tamil">வலைப்பின்னல்_இணை</td>
+                            <td data-label="Hindi">वाईफाई_जोड़ो</td>
+                            <td data-label="English" class="command">CONNECT_WIFI</td>
+                            <td data-label="Argument">&lt;network_name&gt; **PASSWORD** &lt;password&gt;</td>
+                            <td data-label="Description">Connects to a password-protected Wi-Fi network using the given credentials.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Tamil">துறைமுகம்_சோதனை</td>
+                            <td data-label="Hindi">पोर्ट_जांच</td>
+                            <td data-label="English" class="command">PORT_SCAN</td>
+                            <td data-label="Argument">&lt;target_address&gt; **PORT** &lt;port_range&gt;</td>
+                            <td data-label="Description">Scans the target address for open ports within the specified range (e.g., 1-1024).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h3>3.2. Three-Argument Commands (3 Args)</h3>
+                <p>This command requires **THREE** main arguments, separated by two keyword arguments.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tamil Keyword</th>
+                            <th>Hindi Keyword</th>
+                            <th>English Command</th>
+                            <th>Arguments Required (Syntax)</th>
+                            <th>Functionality Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Tamil">இணைப்பு_IP_அமை</td>
+                            <td data-label="Hindi">इंटरफ़ेस_IP_सेट_करो</td>
+                            <td data-label="English" class="command">SET_IP</td>
+                            <td data-label="Argument">&lt;interface_name&gt; &lt;ip_address&gt; **GATEWAY** &lt;gateway&gt; **NETMASK** &lt;subnet_mask&gt;</td>
+                            <td data-label="Description">Statically assigns an IP address, gateway, and subnet mask to the specified interface.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        <hr>
+
+        <section id="keywords">
+            <h2>4. Argument Keywords</h2>
+            <p>These are fixed keywords used to structure and separate the main arguments in multi-argument commands.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tamil Keyword</th>
+                        <th>Hindi Keyword</th>
+                        <th>English Keyword</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Tamil">வாயில்</td>
+                        <td data-label="Hindi">गेटवे</td>
+                        <td data-label="English" class="keyword">GATEWAY</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">மடக்கெண்</td>
+                        <td data-label="Hindi">नेटमास्क</td>
+                        <td data-label="English" class="keyword">NETMASK</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">கடவுச்சொல்</td>
+                        <td data-label="Hindi">पासवर्ड</td>
+                        <td data-label="English" class="keyword">PASSWORD</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Tamil">துறைமுகம்</td>
+                        <td data-label="Hindi">पोर्ट</td>
+                        <td data-label="English" class="keyword">PORT</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vallaipallam Documentation. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,173 @@
+/*
+ * Vallaipallam VNAS Command Documentation Styles
+ * Theme: Black and Yellow
+ */
+
+/* --- Variables and Base Styles --- */
+:root {
+    --color-primary: #FFD700; /* Gold/Yellow for accents and text */
+    --color-secondary: #000000; /* Black for background */
+    --color-text-light: #F8F8F8; /* Light gray for general text */
+    --color-text-dark: #333333; /* Dark gray for subtle text on yellow */
+    --color-table-border: #444444; /* Darker grey for table lines */
+    --font-mono: 'Courier New', monospace; /* Monospace font for commands */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* --- Header & Footer --- */
+header {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--color-primary);
+}
+
+header h1 {
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-style: italic;
+    color: var(--color-text-dark);
+}
+
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+/* --- Main Content Layout --- */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2, h3 {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+hr {
+    border: none;
+    border-top: 1px dashed var(--color-table-border);
+    margin: 40px 0;
+}
+
+/* --- Table Styling --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.95em;
+}
+
+thead {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+th {
+    padding: 12px 15px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--color-table-border);
+    vertical-align: top;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #111111; /* Slightly lighter black for row stripes */
+}
+
+tbody tr:hover {
+    background-color: #222222;
+}
+
+/* Specific styling for command and keyword cells */
+.command, .keyword {
+    font-family: var(--font-mono);
+    font-weight: bold;
+    color: var(--color-primary);
+    background-color: #333333;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.keyword {
+    color: #00FF00; /* A touch of green for keywords */
+}
+
+.command {
+    font-size: 1.1em;
+}
+
+/* Responsive Table Design (for smaller screens) */
+@media screen and (max-width: 800px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid var(--color-table-border);
+        margin-bottom: 10px;
+        display: block;
+        padding: 10px 0;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px dotted var(--color-table-border);
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    td:before {
+        /* Use the data-label attribute to display the column name */
+        content: attr(data-label);
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: var(--color-primary);
+    }
+
+    .command {
+        /* Ensure the command text is visible and prominent on mobile */
+        display: block;
+        width: 100%;
+        text-align: right;
+        font-size: 1em;
+        padding: 0;
+        background-color: transparent;
+    }
+}
